@@ -1,0 +1,147 @@
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>OAK - HTML Theme</title>
+    <meta name="description" content="">
+    <meta name="msapplication-tap-highlight" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--  Bootstrap 3-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+
+    <!--  Slider -->
+    <link rel="stylesheet" href="css/jquery.kenburnsy.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Web Icons Font -->
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="css/iconmoon.css">
+    <link rel="stylesheet" href="css/et-line.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+
+    <!-- Loader Style -->
+    <link rel="stylesheet" href="css/loader-1.css">
+
+    <!-- Costum Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+
+    <!-- Modernizer & Respond js -->
+
+
+</head>
+
+<body>
+{% include 'admin/Header.html.twig' %}
+<div class="container">
+<form class="insertform" action="createProduct" method="post" enctype="multipart/form-data" >
+    <div class="row">
+        <div class="col-sm-6">
+        <label for="name">Name</label>
+        <input type='text' name="name" />
+        </div>
+        <div class="col-sm-6">
+            <label for="price">Price</label>
+        <input type='text' name="price" />
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Title</label>
+                <input type='text' name="title" />
+            </div>
+
+            <div class="col-sm-6">
+                <label>Title</label>
+                <input type='text' name="title" />
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label >Content:</label>
+                <textarea id="content" name="content" class="full-width"></textarea>
+            </div>
+        </div>
+                <div class="row">
+                    <div class="col-sm-12">
+
+                <input type='file' multiple name="fileToUpload[]"/>
+
+                    </div>
+                </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <input class="btn btn-primary" type='submit' onclick="submitForm()" />
+        </div>
+    </div>
+
+
+
+
+
+</form>
+</div>
+</body>
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script data-pace-options='{ "ajax": false }' src="js/vendor/pace.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/classie.js"></script>
+<script src="js/vendor/isotope.pkgd.min.js"></script>
+<script src="js/vendor/jquery.velocity.min.js"></script>
+<script src="js/vendor/jquery.kenburnsy.min.js"></script>
+<script src="js/vendor/textslide.js"></script>
+<script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="js/vendor/tabs.js"></script>
+<script src="js/ef-slider.js"></script>
+<script src="js/vendor/owl.carousel.min.js"></script>
+<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="js/vendor/jquery.social-buttons.min.js"></script>
+<script src="js/vendor/wow.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="js\tinymce.min.js"></script>
+<script src="js\scripts.js"></script>
+<script>tinymce.init({
+        selector: 'textarea',
+        height: 500,
+        theme: 'modern',
+        plugins: [
+            "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+            "save table contextmenu directionality emoticons template textcolor paste  textcolor colorpicker"
+        ],        toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+        image_advtab: true,
+        templates: [
+            { title: 'Test template 1', content: 'Test 1' },
+            { title: 'Test template 2', content: 'Test 2' }
+        ],
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tinymce.com/css/codepen.min.css'
+        ]
+    });</script>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="">
+{%  include "lucky/head.html.twig" %}
+<body>
+{%  include "lucky/Header.html.twig" %}
+
+    <div class="js-masonry">
+
+        <div class="row" id="work-grid">
+            <!-- Begin of Thumbs Portfolio -->
+            {% for product in results %}
+                <div class="col-md-4 col-sm-4 col-xs-12 mix {{ product.id }}">
+                    <div class="img home-portfolio-image">
+                        <img src="{{ product.images }}" alt="Portfolio Item">
+                        <div class="overlay-thumb">
+                            <a href="javascript:void(0)" class="like-product" data-product="{{ product.id }}">
+                                <i class="ion-ios-heart-outline"></i>
+                                <span class="like-product">Liked</span>
+                                <span class="output">250</span>
+                            </a>
+                            <div class="details">
+                                <span class="title">{{ product.title }}</span>
+                                <span class="info">{{ product.content |raw }}</span>
+                            </div>
+                            <span class="btnBefore"></span>
+                            <span class="btnAfter"></span>
+                            <a class="main-portfolio-link" href="/product/{{ product.id }}"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% include "lucky/footer.html.twig" %}
+{%  include "lucky/scripts.html.twig" %}
+</body>
+</html>

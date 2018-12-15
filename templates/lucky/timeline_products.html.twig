@@ -1,0 +1,149 @@
+<body class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>OAK - HTML Theme</title>
+    <meta name="description" content="">
+    <meta name="msapplication-tap-highlight" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--  Bootstrap 3-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+
+    <!--  Slider -->
+    <link rel="stylesheet" href="css/jquery.kenburnsy.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Web Icons Font -->
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="css/iconmoon.css">
+    <link rel="stylesheet" href="css/et-line.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+
+    <!-- Loader Style -->
+    <link rel="stylesheet" href="css/loader-1.css">
+
+    <!-- Costum Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+
+    <!-- Modernizer & Respond js -->
+
+
+</head>
+<body>
+{% include 'lucky/Header.html.twig' %}
+<div class="container">
+    <div class="header-page ef-parallax-bg" style="background-image:url(img/blog-header.jpg)">
+        <div class="col-md-6 col-md-offset-6">
+            <div class="row">
+                <div class="inner-content">
+                    <div class="header-content">
+                        <h1>Blog Posts</h1>
+                        <hr>
+                        <p>Everything created in simple way</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container margin-top">
+    <div class="blog-wrapper">
+        <div class="main">
+            <ul class="cbp_tmtimeline">
+                {% for product in products %}
+                <li>
+                    <div class="cbp_tmtime">
+                        <span>{{ product.date }}</span>
+                    </div>
+                    <div class="cbp_tmicon icon-calendar"></div>
+                    <div class="cbp_tmlabel wow animated fadeInUp" data-wow-delay="0.10s">
+                        <div class="blog-v2-image">
+                            <img src="../{{ product.images }}" alt="Blog Post">
+                            <div class="icon-video-blogv2">
+                                <a href="https://vimeo.com/29993935" class="popup-video playBut">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="69px" height="69px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                                            <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                    73.5,62.5 148.5,105.8 73.5,149.1 " />
+                                        <circle class="circle" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="single-blog.html">
+                            <h1>{{ product.title }}</h1>
+                        </a>
+
+{{ product.content |raw }}
+                    </div>
+                </li>
+                {%  endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="pagination-ef wow animated fadeInUp" data-wow-delay="0.20s">
+        <li>
+            <a href="#">
+                <i class="pe-7s-angle-left"></i>
+            </a>
+        </li>
+        <li class="current"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">8</a></li>
+        <li>
+            <a href="#">
+                <i class="pe-7s-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+{% include "lucky/footer.html.twig" %}
+<a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
+
+<script src="../js/vendor/jquery-1.11.2.min.js"></script>
+<script data-pace-options='{ "ajax": false }' src="../js/vendor/pace.min.js"></script>
+<script src="../js/vendor/bootstrap.min.js"></script>
+<script src="../js/vendor/classie.js"></script>
+<script src="../js/vendor/isotope.pkgd.min.js"></script>
+<script src="../js/vendor/jquery.velocity.min.js"></script>
+<script src="../js/vendor/jquery.kenburnsy.min.js"></script>
+<script src="../js/vendor/textslide.js"></script>
+<script src="../js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="../js/vendor/tabs.js"></script>
+<script src="../js/ef-slider.js"></script>
+<script src="../js/vendor/owl.carousel.min.js"></script>
+<script src="../js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="../js/vendor/jquery.social-buttons.min.js"></script>
+<script src="../js/vendor/wow.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/ajax.js"></script>
+</body>
+</html>
